@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Penghitung Hari Mundur</title>
+</head>
+
+<body>
+    <span id="kurang_hari">13</span> Hari Lagi
+</body>
+
+<script>
+    $(document).ready(function () {
+        var today = new Date();
+        var tanggal_resign = new Date("2024-07-01");
+
+        var timeDifference = tanggal_resign.getTime() - today.getTime();
+        var dayDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
+
+        $('#kurang_hari').text(dayDifference);
+    });
+</script>
+
+</html>
